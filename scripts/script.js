@@ -1,21 +1,45 @@
 $(document).ready(function() {
 
-var audio = new Audio("lounge mix (HQ) by Bee Flow.mp3")
-audio.play()
 
-setInterval(function() {
-    $(".mainpicture").animate({
-        height: window.innerHeight,
-        width: window.innerWidth,
+  $(".parent").append('<div class="a1"></div>')
 
-    }, 8000);
+    function moveDiv() {
+        var span = $(".a");
 
-    $(".mainpicture").animate({
-        height: '0px',
-        width: '0px',
+        span.fadeOut(200, function() {
+            var maxLeft = $(window).width() - span.width();
+            var maxTop = $(window).height() - span.height();
+            var leftPos = Math.floor(Math.random() * (maxLeft + 1))
+            var topPos = Math.floor(Math.random() * (maxTop + 1))
 
-    }, 3000);
-  })
+            span.css({
+                left: leftPos,
+                top: topPos
+            }).fadeIn(200);
+        });
+    };
+
+    moveDiv();
+    setInterval(moveDiv, 200);
+
+
+
+    // var audio = new Audio("lounge mix (HQ) by Bee Flow.mp3")
+    // audio.play()
+
+    // setInterval(function() {
+    //     $(".mainpicture").animate({
+    //         height: window.innerHeight,
+    //         width: window.innerWidth,
+    //
+    //     }, 1000);
+    //
+    //     $(".mainpicture").animate({
+    //         height: '0px',
+    //         width: '0px',
+    //
+    //     }, 1000);
+    //   })
 
 
 });
