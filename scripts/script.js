@@ -1,8 +1,5 @@
 $(document).ready(function() {
 
-
-  $(".parent").append('<div class="a1"></div>')
-
     function moveDiv() {
         var span = $(".a");
 
@@ -21,25 +18,5 @@ $(document).ready(function() {
 
     moveDiv();
     setInterval(moveDiv, 1000);
-
-
-
-    // var audio = new Audio("lounge mix (HQ) by Bee Flow.mp3")
-    // audio.play()
-
-    // setInterval(function() {
-    //     $(".mainpicture").animate({
-    //         height: window.innerHeight,
-    //         width: window.innerWidth,
-    //
-    //     }, 1000);
-    //
-    //     $(".mainpicture").animate({
-    //         height: '0px',
-    //         width: '0px',
-    //
-    //     }, 1000);
-    //   })
-
 
 });
