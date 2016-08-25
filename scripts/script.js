@@ -6,7 +6,7 @@ $(document).ready(function() {
     function moveDiv() {
         var span = $(".a");
 
-        span.fadeOut(200, function() {
+        span.fadeOut(1000, function() {
             var maxLeft = $(window).width() - span.width();
             var maxTop = $(window).height() - span.height();
             var leftPos = Math.floor(Math.random() * (maxLeft + 1))
@@ -15,12 +15,12 @@ $(document).ready(function() {
             span.css({
                 left: leftPos,
                 top: topPos
-            }).fadeIn(200);
+            }).fadeIn(1000);
         });
     };
 
     moveDiv();
-    setInterval(moveDiv, 200);
+    setInterval(moveDiv, 1000);
 
 
 
