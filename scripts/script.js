@@ -1,26 +1,26 @@
 $(document).ready(function() {
 
-
-  $(".parent").append('<div class="a1"></div>')
+  //
+  // $(".parent").append('<div class="a1"></div>')
 
     function moveDiv() {
-        var span = $(".a");
+        var fern = $(".a");
 
-        span.fadeOut(200, function() {
-            var maxLeft = $(window).width() - span.width();
-            var maxTop = $(window).height() - span.height();
+        fern.fadeOut(1000, function() {
+            var maxLeft = $(window).width() - fern.width();
+            var maxTop = $(window).height() - fern.height();
             var leftPos = Math.floor(Math.random() * (maxLeft + 1))
             var topPos = Math.floor(Math.random() * (maxTop + 1))
 
-            span.css({
+            fern.css({
                 left: leftPos,
                 top: topPos
-            }).fadeIn(200);
+            }).fadeIn(1000);
         });
     };
 
     moveDiv();
-    setInterval(moveDiv, 200);
+    setInterval(moveDiv, 1000);
 
 
 
@@ -28,13 +28,13 @@ $(document).ready(function() {
     // audio.play()
 
     // setInterval(function() {
-    //     $(".mainpicture").animate({
+    //     $(".a").animate({
     //         height: window.innerHeight,
     //         width: window.innerWidth,
     //
     //     }, 1000);
     //
-    //     $(".mainpicture").animate({
+    //     $(".a").animate({
     //         height: '0px',
     //         width: '0px',
     //
