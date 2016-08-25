@@ -1,15 +1,15 @@
 $(document).ready(function() {
 
     function moveDiv() {
-        var span = $(".a");
+        var fern = $(".a");
 
-        span.fadeOut(1000, function() {
-            var maxLeft = $(window).width() - span.width();
-            var maxTop = $(window).height() - span.height();
+        fern.fadeOut(1000, function() {
+            var maxLeft = $(window).width() - fern.width();
+            var maxTop = $(window).height() - fern.height();
             var leftPos = Math.floor(Math.random() * (maxLeft + 1))
             var topPos = Math.floor(Math.random() * (maxTop + 1))
 
-            span.css({
+            fern.css({
                 left: leftPos,
                 top: topPos
             }).fadeIn(1000);
